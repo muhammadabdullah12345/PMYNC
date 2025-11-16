@@ -1,0 +1,25 @@
+nav{
+    background-color: black;
+    color: white;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    font-weight: 400;
+    padding: 14px 40px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 12px;
+}
+
+#contactBtn{
+    background-color: #088E48;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+}
+
