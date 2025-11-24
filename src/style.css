@@ -27,6 +27,18 @@ a:active{
 .white{
   color: white;
 }
+
+h1{
+  font-size: 40px;
+}
+
+.white-section{
+  height: auto;
+  background-color: white;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 45px 60px;
+}
 .outlined-text {
     /* Sets the inner color of the text to transparent (hollow) */
     -webkit-text-fill-color: transparent;
@@ -40,5 +52,20 @@ a:active{
     
     /* Ensure a decent font size for the effect to be visible */
     font-size: 48px;
+    font-weight: 800;
+}
+.outlined-text-black-offset {
+    /* Sets the inner color of the text to transparent (hollow) */
+    -webkit-text-fill-color: transparent;
+    
+    /* Applies a 2-pixel black stroke/outline */
+    -webkit-text-stroke: 1px black;
+    
+    /* Standard property fallback (though not fully supported for fill/stroke effect) */
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    
+    /* Ensure a decent font size for the effect to be visible */
+    font-size: 24px;
     font-weight: 800;
 }

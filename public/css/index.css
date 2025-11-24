@@ -58,3 +58,43 @@
   align-items: center;
   justify-content: center;
 }
+.white-section .left, .white-section .right{
+  width: 50%;
+}
+
+.white-section .left{
+  text-align: center;
+}
+
+.white-section .left img{
+  width: 75%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.white-section .right h1{
+  margin-top: 12px;
+  width: 80%;
+}
+.white-section .right p{
+  font-size: 18px;
+  color: #6A7282;
+  width: 80%;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 18px;
+}
+.hero .hero-content .cta-buttons a:first-of-type {
+  padding: 12px 24px;
+  background-color: #088e48;
+  border: none;
+  border-radius: 12px;
+}
+
+.white-section a {
+  padding: 12px 24px;
+  background-color: #088e48;
+  border: none;
+  border-radius: 12px;
+  width: 20%;
+  margin-top: 24px;
+}
