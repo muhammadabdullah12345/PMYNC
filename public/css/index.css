@@ -240,3 +240,34 @@
   gap: 0.4px;
   margin-left: 8px;
 }
+
+.gray-section{
+  background-color: #F6F6F6;
+  color: #041502;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  padding: 30px 110px;
+}
+
+.gray-section div{
+  width: 20%;
+}
+
+.gray-section h1, .gray-section h3{
+  margin-top: 16px;
+}
+
+.gray-section p{
+  color: #6A7282;
+  margin-top: 8px;
+}
+
+.gray-section-card{
+  background-color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 24px;
+}
