@@ -1,0 +1,72 @@
+<div class="bg-gray-100 p-6">
+  <div class="max-w-xl mx-auto py-12">
+    <h2 class="text-4xl font-extrabold mb-8 text-center">FAQ</h2>
+    <div class="space-y-6">
+      <!-- Item 1 -->
+      <div class="bg-white shadow-md rounded-lg">
+        <button
+          class="w-full flex items-center justify-between p-4"
+          onclick="toggleItem(1)"
+        >
+          <span class="text-lg font-semibold">
+            Do you offer international shipping?
+          </span>
+          <svg
+            id="icon-plus-1"
+            class="w-6 h-6 text-gray-600"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+            />
+          </svg>
+          <svg
+            id="icon-minus-1"
+            class="w-6 h-6 text-gray-600 hidden"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" />
+          </svg>
+        </button>
+        <div id="content-1" class="p-4 text-gray-700 hidden">
+          <p>Yes, we ship to over 50 countries worldwide...</p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="bg-white shadow-md rounded-lg">
+        <button
+          class="w-full flex items-center justify-between p-4"
+          onclick="toggleItem(2)"
+        >
+          <span class="text-lg font-semibold">Can I change my order?</span>
+          <svg
+            id="icon-plus-2"
+            class="w-6 h-6 text-gray-600"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+            />
+          </svg>
+          <svg
+            id="icon-minus-2"
+            class="w-6 h-6 text-gray-600 hidden"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" />
+          </svg>
+        </button>
+        <div id="content-2" class="p-4 text-gray-700 hidden">
+          <p>You can change your order within 24 hours of purchase...</p>
+        </div>
+      </div>
+
+      <!-- Add more items as needed -->
+    </div>
+  </div>
+</div>

@@ -4,26 +4,301 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
+    <link rel="stylesheet" href="/components/faq.css" />
   </head>
   <body>
     <div id="navbar"></div>
-    <section id="events-section"></section>
+    <!-- <section id="events-section"></section>
 
     <script type="module">
       import { loadInProgress } from "/src/loadInProgress.js";
       loadInProgress("#events-section");
-    </script>
+    </script> -->
 
     <!-- your page content here -->
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.316457902142!2d72.99661877537042!3d33.64896123891773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df95de011bffff%3A0xec81f232488ce429!2sNUST%20Gate%201!5e0!3m2!1sen!2s!4v1763293370401!5m2!1sen!2s"
-      width="90%"
-      height="600"
-      style="border: 0"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
+    <section class="hero">
+      <h1>Get in Touch</h1>
+      <p>
+        Have a question or want to get involved? We'd love to hear from you.
+        Fill out the form below or reach out through our contact information
+      </p>
+    </section>
+    <section class="howWeHelp">
+      <h1>HOW CAN WE HELP YOU TODAY?</h1>
+      <p>
+        Choose the category that best matches your inquiry and we will connect
+        you to the right support team.
+      </p>
+      <div class="selections">
+        <div class="selection">
+          <img src="" alt="" />
+          <h2>General Inquiries</h2>
+          <p>Ask Us anything!</p>
+        </div>
+        <div class="selection">
+          <img src="" alt="" />
+          <h2>Joining our programs</h2>
+          <p>Learn How to get involved</p>
+        </div>
+        <div class="selection">
+          <img src="" alt="" />
+          <h2>Technical Support</h2>
+          <p>Report a site issue</p>
+        </div>
+        <div class="selection">
+          <img src="" alt="" />
+          <h2>Partnership inquiries</h2>
+          <p>Let's Work together</p>
+        </div>
+        <div class="selection">
+          <img src="" alt="" />
+          <h2>Feedback</h2>
+          <p>Help us improve</p>
+        </div>
+      </div>
+    </section>
+    <section class="sendMsg">
+      <div class="left">
+        <h2>Contact Information</h2>
+        <div class="address">
+          <div class="placeName">Office Address</div>
+          <div class="placeAddress">
+            Prime Minister's Office Constitution Avenue, Islamabad, Pakistan
+          </div>
+        </div>
+        <div class="email">
+          <h2>Email</h2>
+          <div class="emailList">
+            <a href="mailto:support@pmnycpk.gov.pk">support@pmnycpk.gov.pk</a>
+            <a href="mailto:info@pmnycpk.gov.pk">info@pmnycpk.gov.pk</a>
+          </div>
+          <div class="phone">
+            <h2>Phone</h2>
+            <div class="phoneList">
+              <p>+92 123456789</p>
+              <p>+92 123456789</p>
+            </div>
+          </div>
+          <div class="officeTime">
+            <h2>Office Hours</h2>
+            <div class="hours">
+              <p>Monday - Friday</p>
+              <p>9:00 AM - 5:00 PM (PKT)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="formbold-main-wrapper">
+          <!-- Author: FormBold Team -->
+          <div class="formbold-form-wrapper">
+            <form action="https://formbold.com/s/FORM_ID" method="POST">
+              <div class="formbold-form-title">
+                <h2>Send us a Message</h2>
+                <p>
+                  Fill out the form below and our team will get back to you
+                  within 2-3 business days.
+                </p>
+              </div>
+
+              <!-- First Name and Last Name -->
+              <div class="formbold-input-flex">
+                <div>
+                  <label for="firstname" class="formbold-form-label"
+                    >First Name</label
+                  >
+                  <input
+                    type="text"
+                    name="firstname"
+                    id="firstname"
+                    class="formbold-form-input"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="lastname" class="formbold-form-label"
+                    >Last Name</label
+                  >
+                  <input
+                    type="text"
+                    name="lastname"
+                    id="lastname"
+                    class="formbold-form-input"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Email and Phone Number -->
+              <div class="formbold-input-flex">
+                <div>
+                  <label for="email" class="formbold-form-label"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="formbold-form-input"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="phone" class="formbold-form-label"
+                    >Phone Number</label
+                  >
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    class="formbold-form-input"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Province and City -->
+              <div class="formbold-input-flex">
+                <div>
+                  <label for="province" class="formbold-form-label"
+                    >Province</label
+                  >
+                  <input
+                    type="text"
+                    name="province"
+                    id="province"
+                    class="formbold-form-input"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="city" class="formbold-form-label">City</label>
+                  <input
+                    type="text"
+                    name="city"
+                    id="city"
+                    class="formbold-form-input"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Type of Inquiry -->
+              <div class="formbold-mb-3">
+                <label for="inquiry" class="formbold-form-label"
+                  >Type of Inquiry</label
+                >
+                <select
+                  name="inquiry"
+                  id="inquiry"
+                  class="formbold-form-input"
+                  required
+                >
+                  <option value="">Select inquiry type</option>
+                  <option value="General">General</option>
+                  <option value="Support">Support</option>
+                  <option value="Sales">Sales</option>
+                </select>
+              </div>
+
+              <!-- Subject -->
+              <div class="formbold-mb-3">
+                <label for="subject" class="formbold-form-label">Subject</label>
+                <input
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  class="formbold-form-input"
+                  required
+                />
+              </div>
+
+              <!-- Message -->
+              <div class="formbold-mb-3">
+                <label for="message" class="formbold-form-label">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  class="formbold-form-input"
+                  rows="6"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Send Message Button -->
+              <button type="submit" class="formbold-btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="focusPoints">
+      <h1>REGIONAL FOCUAL POINTS</h1>
+      <p>
+        Our regional representatives ensure youth from every province and
+        territory can access guidance and support locally.
+      </p>
+      <div class="focalPoints">
+        <div class="focalPoint">
+          <div class="focalLocation">Punjab</div>
+          <div class="focalName">Ali Hassan</div>
+          <div class="focalContact">
+            <div class="focalEmail">123@pmnycpk.gov.pk</div>
+            <div class="focalPhone">+92 1234567890</div>
+            <div class="focalSupport">Local Support Available</div>
+          </div>
+        </div>
+        <div class="focalPoint">
+          <div class="focalLocation">Sindh</div>
+          <div class="focalName">Fatima Ahmed</div>
+          <div class="focalContact">
+            <div class="focalEmail">123@pmnycpk.gov.pk</div>
+            <div class="focalPhone">+92 1234567890</div>
+            <div class="focalSupport">Local Support Available</div>
+          </div>
+        </div>
+        <div class="focalPoint">
+          <div class="focalLocation">KPK</div>
+          <div class="focalName">Bilal Shah</div>
+          <div class="focalContact">
+            <div class="focalEmail">123@pmnycpk.gov.pk</div>
+            <div class="focalPhone">+92 1234567890</div>
+            <div class="focalSupport">Local Support Available</div>
+          </div>
+        </div>
+        <div class="focalPoint">
+          <div class="focalLocation">Balochistan</div>
+          <div class="focalName">Ayesha Khan</div>
+          <div class="focalContact">
+            <div class="focalEmail">123@pmnycpk.gov.pk</div>
+            <div class="focalPhone">+92 1234567890</div>
+            <div class="focalSupport">Local Support Available</div>
+          </div>
+        </div>
+        <div class="focalPoint">
+          <div class="focalLocation">Gilgit Baltistan</div>
+          <div class="focalName">Zainab Hassan</div>
+          <div class="focalContact">
+            <div class="focalEmail">123@pmnycpk.gov.pk</div>
+            <div class="focalPhone">+92 1234567890</div>
+            <div class="focalSupport">Local Support Available</div>
+          </div>
+        </div>
+        <div class="focalPoint">
+          <div class="focalLocation">Islamabad/RWP</div>
+          <div class="focalName">Hassan Raza</div>
+          <div class="focalContact">
+            <div class="focalEmail">123@pmnycpk.gov.pk</div>
+            <div class="focalPhone">+92 1234567890</div>
+            <div class="focalSupport">Local Support Available</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="map">
+      <h1>Visit Our Office</h1>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.249580909787!2d73.0963438!3d33.7283618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfc087a9c924ff%3A0x58cdd597422db5c0!2sConstitution%20Ave%2C%20Islamabad!5e0!3m2!1sen!2s!4v1764418536842!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
 
     <div id="footer"></div>
 
