@@ -293,7 +293,7 @@ span {
   border-radius: 12px 12px 50px 12px;
 }
 
-.rep-places:last-of-type {
+.rep-places-2 {
   gap: 32px;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 32px;
