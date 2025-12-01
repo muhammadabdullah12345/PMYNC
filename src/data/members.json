@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "name": "Hassan Khan",
+    "city": "Islamabad",
+    "province": "Federal",
+    "designation": "President",
+    "sector": "Policy Development",
+    "type": "Leadership",
+    "image": "/assets/images/placeholders/glassesGuy2.svg",
+    "year": "2024"
+  },
+  {
+    "id": 2,
+    "name": "Ayesha Malik",
+    "city": "Lahore",
+    "province": "Punjab",
+    "designation": "Vice President",
+    "sector": "Education",
+    "type": "Members",
+    "image": "/assets/images/placeholders/portraitWoman.svg",
+    "year": "2024"
+  },
+  {
+    "id": 3,
+    "name": "Ali Raza",
+    "city": "Karachi",
+    "province": "Sindh",
+    "designation": "Regional Director",
+    "sector": "Social Work",
+    "type": "Alumni",
+    "image": "/assets/images/placeholders/moggingGuy.svg",
+    "year": "2023"
+  }
+]
