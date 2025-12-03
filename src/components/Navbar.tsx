@@ -1,48 +1,132 @@
 import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
 
 export function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <nav className="navbar">
-      <ul>
-        <li>
-          <img src="/assets/images/pmyncLogo.png" alt="PMYNC LOGO" width={75} />
-        </li>
-        <li>
+    <nav className="sticky top-0 z-50 bg-black text-white font-normal py-3.5 px-4 lg:px-10">
+      <div className="flex justify-between items-center">
+        {/* Logo Section */}
+        <div className="flex items-center gap-2 lg:gap-4">
+          <img 
+            src="/assets/images/pmyncLogo.png" 
+            alt="PMYNC LOGO" 
+            className="w-12 lg:w-[75px]" 
+          />
           <img
             src="/assets/images/pmyncLogo2.png"
             alt="PMYNC LOGO 2"
-            width={170}
+            className="hidden sm:block w-[120px] lg:w-[170px]"
           />
-        </li>
-        <li>
-          <img src="/assets/images/emblem.png" alt="EMBLEM" width={100} />
-        </li>
-        <li>
-          <img
-            src="/assets/images/inlights.svg"
-            alt="INLIGHTS"
-            style={{ height: 27.5 }}
-          />
-        </li>
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/about">About</NavLink>
-        </li>
-        <li>
-          <NavLink to="/members">Members</NavLink>
-        </li>
-        <li>
-          <NavLink to="/projects">Projects</NavLink>
-        </li>
-        <li>
-          <Link to="/contact" id="contactBtn">
-            Contact Us{" "}
+        </div>
+
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex items-center gap-3">
+          <img src="/assets/images/emblem.png" alt="EMBLEM" className="w-[100px]" />
+          <img src="/assets/images/inlights.svg" alt="INLIGHTS" className="h-[27.5px]" />
+          <NavLink 
+            to="/" 
+            className={({ isActive }) => `px-3 py-2 ${isActive ? "text-[#088E48]" : "hover:text-[#088E48]"}`}
+          >
+            Home
+          </NavLink>
+          <NavLink 
+            to="/about" 
+            className={({ isActive }) => `px-3 py-2 ${isActive ? "text-[#088E48]" : "hover:text-[#088E48]"}`}
+          >
+            About
+          </NavLink>
+          <NavLink 
+            to="/members" 
+            className={({ isActive }) => `px-3 py-2 ${isActive ? "text-[#088E48]" : "hover:text-[#088E48]"}`}
+          >
+            Members
+          </NavLink>
+          <NavLink 
+            to="/projects" 
+            className={({ isActive }) => `px-3 py-2 ${isActive ? "text-[#088E48]" : "hover:text-[#088E48]"}`}
+          >
+            Projects
+          </NavLink>
+          <Link 
+            to="/contact" 
+            className="bg-[#088E48] px-6 py-3 rounded-xl inline-flex items-center gap-2 hover:bg-[#0a6e3a]"
+          >
+            Contact Us
             <img src="/assets/images/anchorArrow.svg" width={20} alt="arrow" />
           </Link>
-        </li>
-      </ul>
+        </div>
+
+        {/* Mobile Hamburger Button */}
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="flex flex-col justify-center items-center w-10 h-10 gap-1.5 relative z-[60] lg:hidden"
+          aria-label="Toggle menu"
+        >
+          <span
+            className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
+              isMenuOpen ? "rotate-45 translate-y-2" : ""
+            }`}
+          />
+          <span
+            className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
+              isMenuOpen ? "opacity-0" : ""
+            }`}
+          />
+          <span
+            className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
+              isMenuOpen ? "-rotate-45 -translate-y-2" : ""
+            }`}
+          />
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`fixed left-0 right-0 bg-black transition-all duration-300 overflow-hidden z-40 lg:hidden ${
+          isMenuOpen ? "top-[57px] max-h-screen opacity-100" : "top-[57px] max-h-0 opacity-0"
+        }`}
+      >
+        <nav className="flex flex-col items-center py-6 gap-6">
+          <NavLink 
+            to="/" 
+            onClick={() => setIsMenuOpen(false)}
+            className={({ isActive }) => `w-full text-center py-2 ${isActive ? "text-[#088E48]" : ""}`}
+          >
+            Home
+          </NavLink>
+          <NavLink 
+            to="/about" 
+            onClick={() => setIsMenuOpen(false)}
+            className={({ isActive }) => `w-full text-center py-2 ${isActive ? "text-[#088E48]" : ""}`}
+          >
+            About
+          </NavLink>
+          <NavLink 
+            to="/members" 
+            onClick={() => setIsMenuOpen(false)}
+            className={({ isActive }) => `w-full text-center py-2 ${isActive ? "text-[#088E48]" : ""}`}
+          >
+            Members
+          </NavLink>
+          <NavLink 
+            to="/projects" 
+            onClick={() => setIsMenuOpen(false)}
+            className={({ isActive }) => `w-full text-center py-2 ${isActive ? "text-[#088E48]" : ""}`}
+          >
+            Projects
+          </NavLink>
+          <Link 
+            to="/contact" 
+            onClick={() => setIsMenuOpen(false)}
+            className="bg-[#088E48] px-6 py-3 rounded-xl inline-flex items-center gap-2"
+          >
+            Contact Us
+            <img src="/assets/images/anchorArrow.svg" width={20} alt="arrow" />
+          </Link>
+        </nav>
+      </div>
     </nav>
   );
 }
