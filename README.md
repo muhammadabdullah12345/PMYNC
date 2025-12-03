@@ -18,6 +18,7 @@ The official website for the **Prime Minister's National Youth Council (PMYNC)**
 - **HTML5**: Semantic markup.
 - **CSS3**: Custom styling with `index.css`, `style.css`, and `utility.css`.
 - **JavaScript**: Interactive elements and logic.
+- **React JS**: Reusable components and convenient JavaScript implementation.
 
 ## 📦 Getting Started
 
