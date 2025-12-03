@@ -311,15 +311,15 @@ span {
   width: calc(100% / 3 - 9.33px);
 }
 
-.rep-images-2{
+.rep-images-2 {
   display: flex;
   gap: 32px;
   margin-top: 40px;
   font-weight: 600;
 }
 
-.rep-images-2 .rep-img{
-  border: 1px solid #088E48;
+.rep-images-2 .rep-img {
+  border: 1px solid #088e48;
   border-radius: 12px;
   padding-bottom: 12px;
   display: flex;

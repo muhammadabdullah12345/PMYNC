@@ -1,5 +1,8 @@
 import { useEffect } from "react";
 import { setupRevealAnimations } from "../smoothAnimations.js";
+import NYCEvents from "../components/NYCEvents.js";
+import FAQs from "../components/FAQs.js";
+import CTABanner from "../components/CTABanner.js";
 
 export function HomePage() {
   useEffect(() => {
@@ -474,7 +477,7 @@ export function HomePage() {
       </section>
 
       <section className="working">
-        <h1>HOW IT WORKS</h1>
+        <h1 className="">HOW IT WORKS</h1>
         <p>
           Join thousands of young Pakistanis on a clear path to growth,
           leadership, and impact. Here is exactly what to expect when you become
@@ -532,6 +535,9 @@ export function HomePage() {
           </div>
         </div>
       </section>
+      <NYCEvents />
+      <FAQs />
+      <CTABanner />
     </>
   );
 }
