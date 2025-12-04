@@ -13,7 +13,7 @@ const EventCard = ({
 }) => (
   <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
     <div className="relative">
-      <img src={image} alt={title} className="w-full h-48 object-fill" />
+      <img src={image} alt={title} className="w-full h-[300px] object-fill" />
       {isUpcoming && (
         <span className="absolute top-3 right-3 bg-white text-blue-600 px-3 py-1 rounded-full text-xs font-medium">
           Upcoming
@@ -66,6 +66,7 @@ const NYCEvents = () => {
   const events = [
     {
       image: "/images/image1.png",
+      title: "Youth Entrepreneurship Workshop",
       date: "November 15, 2025",
       location: "Punjab, Pakistan",
       attendees: "150+ Attendees",
@@ -132,13 +133,14 @@ const NYCEvents = () => {
   ];
 
   return (
-    <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-3">
-            NYC <span className="font-black">EVENTS</span>
-          </h1>
+          <span className="text-[44px] font-extrabold mb-3 text-transparent [-webkit-text-stroke:1px_black] text-white">
+            NYC
+          </span>{" "}
+          <span className="text-black text-[44px] font-extrabold">EVENTS</span>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Join us at upcoming events and explore past initiatives that brought
             youth voices to the forefront

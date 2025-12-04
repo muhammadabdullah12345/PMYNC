@@ -7,12 +7,10 @@ const CTABanner = () => {
       {/* Overlay pattern for texture */}
       <div className="absolute inset-0 bg-black/30"></div>
 
-      <div className="relative max-w-4xl mx-auto text-center py-10">
+      <div className="relative max-w-5xl mx-auto text-center py-10">
         {/* Heading */}
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-          Ready to Become Part of the National
-          <br />
-          Youth Council?
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight ">
+          Ready to Become Part of the National Youth Council?
         </h2>
 
         {/* Description */}
