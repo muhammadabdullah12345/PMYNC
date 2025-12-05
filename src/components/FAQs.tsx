@@ -82,7 +82,7 @@ const FAQs = () => {
   };
 
   return (
-    <div className=" bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+    <div className=" py-16 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">

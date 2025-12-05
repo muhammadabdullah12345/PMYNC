@@ -20,55 +20,87 @@ export function Navbar() {
         />
 
         {/* Desktop Navigation */}
-        <img
+        {/* <img
           src="/assets/images/emblem.png"
           alt="EMBLEM"
           className="w-[100px]"
-        />
+        /> */}
         <img
           src="/assets/images/inlights.svg"
           alt="INLIGHTS"
           className="h-[27.5px]"
         />
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            `px-3 py-2 ${isActive ? "text-[#088E48]" : "hover:text-[#088E48]"}`
-          }
-        >
-          Home
-        </NavLink>
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            `px-3 py-2 ${isActive ? "text-[#088E48]" : "hover:text-[#088E48]"}`
-          }
-        >
-          About
-        </NavLink>
-        <NavLink
-          to="/members"
-          className={({ isActive }) =>
-            `px-3 py-2 ${isActive ? "text-[#088E48]" : "hover:text-[#088E48]"}`
-          }
-        >
-          Members
-        </NavLink>
-        <NavLink
-          to="/projects"
-          className={({ isActive }) =>
-            `px-3 py-2 ${isActive ? "text-[#088E48]" : "hover:text-[#088E48]"}`
-          }
-        >
-          Projects
-        </NavLink>
-        <Link
-          to="/contact"
-          className="bg-[#088E48] px-6 py-3 rounded-xl inline-flex items-center gap-2 hover:bg-[#0a6e3a]"
-        >
-          Contact Us
-          <img src="/assets/images/anchorArrow.svg" width={20} alt="arrow" />
-        </Link>
+        <div className="flex items-center justify-center gap-4 ">
+          <div className="flex items-center justify-center gap-8 uppercase text-[18px] font-semibold">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `px-3 py-2 ${
+                  isActive
+                    ? "border-b-2 border-[#088E48]"
+                    : "hover:text-[#088E48]"
+                }`
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `px-3 py-2 ${
+                  isActive
+                    ? "border-b-2 border-[#088E48]"
+                    : "hover:text-[#088E48]"
+                }`
+              }
+            >
+              About
+            </NavLink>
+            <NavLink
+              to="/members"
+              className={({ isActive }) =>
+                `px-3 py-2 ${
+                  isActive
+                    ? "border-b-2 border-[#088E48]"
+                    : "hover:text-[#088E48]"
+                }`
+              }
+            >
+              Members
+            </NavLink>
+            <NavLink
+              to="/partners"
+              className={({ isActive }) =>
+                `px-3 py-2 ${
+                  isActive
+                    ? "border-b-2 border-[#088E48]"
+                    : "hover:text-[#088E48]"
+                }`
+              }
+            >
+              Partners
+            </NavLink>
+            <NavLink
+              to="/projects"
+              className={({ isActive }) =>
+                `px-3 py-2 ${
+                  isActive
+                    ? "border-b-2 border-[#088E48]"
+                    : "hover:text-[#088E48]"
+                }`
+              }
+            >
+              Projects
+            </NavLink>
+          </div>
+          <Link
+            to="/contact"
+            className="bg-[#088E48] px-6 py-3 rounded-xl inline-flex items-center gap-2 hover:bg-[#0a6e3a]"
+          >
+            Contact Us
+            <img src="/assets/images/anchorArrow.svg" width={20} alt="arrow" />
+          </Link>
+        </div>
       </div>
 
       {/* Mobile Hamburger Button */}

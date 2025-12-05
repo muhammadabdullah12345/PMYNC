@@ -11,7 +11,7 @@ const EventCard = ({
   category,
   isUpcoming,
 }) => (
-  <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+  <div className="bg-[#FAFAFA] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
     <div className="relative">
       <img src={image} alt={title} className="w-full h-[300px] object-fill" />
       {isUpcoming && (
@@ -25,37 +25,31 @@ const EventCard = ({
       <h3 className="font-bold text-lg mb-3 text-gray-900">{title}</h3>
 
       <div className="space-y-2 mb-3">
-        <div className="flex items-center text-sm text-gray-600">
-          <Calendar className="w-4 h-4 mr-2 text-green-600" />
-          <span>{date}</span>
+        <div className="flex justify-between items-center">
+          <div className="flex items-center text-sm text-gray-600">
+            <Calendar className="w-4 h-4 mr-2 text-green-600" />
+            <span>{date}</span>
+          </div>
+          <div className="flex items-center text-sm text-gray-600">
+            <Users className="w-4 h-4 mr-2 text-green-600" />
+            <span>{attendees}</span>
+          </div>
         </div>
 
-        <div className="flex items-center text-sm text-gray-600">
+        <div className="flex items-center text-sm text-gray-600 justify-start">
           <MapPin className="w-4 h-4 mr-2 text-green-600" />
           <span>{location}</span>
-        </div>
-
-        <div className="flex items-center text-sm text-gray-600">
-          <Users className="w-4 h-4 mr-2 text-green-600" />
-          <span>{attendees}</span>
         </div>
       </div>
 
       <p className="text-sm text-gray-600 mb-4 line-clamp-2">{description}</p>
 
       <div className="flex items-center justify-between">
-        <span className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">
+        <span className="inline-block bg-green-100 text-[#090] px-3 py-1 rounded-full text-[14px] font-medium">
           {category}
         </span>
-
-        <div className="flex items-center space-x-1">
-          <div className="flex -space-x-2">
-            <div className="w-6 h-6 rounded-full bg-gray-300 border-2 border-white"></div>
-            <div className="w-6 h-6 rounded-full bg-gray-400 border-2 border-white"></div>
-            <div className="w-6 h-6 rounded-full bg-gray-500 border-2 border-white flex items-center justify-center text-xs text-white">
-              +2
-            </div>
-          </div>
+        <div>
+          <img src="/assets/images/participants.svg" alt="" />
         </div>
       </div>
     </div>
@@ -133,7 +127,7 @@ const NYCEvents = () => {
   ];
 
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8">
+    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -141,7 +135,7 @@ const NYCEvents = () => {
             NYC
           </span>{" "}
           <span className="text-black text-[44px] font-extrabold">EVENTS</span>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-[608px] mx-auto">
             Join us at upcoming events and explore past initiatives that brought
             youth voices to the forefront
           </p>
@@ -156,9 +150,9 @@ const NYCEvents = () => {
 
         {/* Show All Button */}
         <div className="text-center">
-          <button className="inline-flex items-center px-6 py-3 border border-gray-300 rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-300 font-medium">
+          <button className="inline-flex items-center px-6 py-2 border border-green-600 rounded-xl text-green-700 bg-white hover:bg-gray-50 transition-colors duration-300 font-medium">
             Show all events
-            <ArrowRight className="ml-2 w-4 h-4" />
+            <ArrowRight className="ml-2 w-4 h-4 -rotate-45" />
           </button>
         </div>
       </div>

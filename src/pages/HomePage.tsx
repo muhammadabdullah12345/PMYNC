@@ -51,13 +51,13 @@ export function HomePage() {
 
   return (
     <>
-      <section className="relative h-[589px]">
+      <section className="relative h-[calc(100vh-100px)]">
         <img
           src="/assets/images/indexHero.jpg"
           alt=""
           className="absolute top-0 -z-50 w-full h-full object-fill brightness-50"
         />
-        <div className="w-full md:w-1/2 pt-8 md:pt-[44px] pl-4 md:pl-[150px] flex flex-col justify-center items-start h-full">
+        <div className="w-full flex flex-col justify-center items-start h-full pl-[67px]">
           <h1 className="text-4xl md:text-[80px] font-[800] mb-[12px] max-w-[992px] leading-[90px]">
             <span className="text-[#088e48]">Pakistan&apos;s </span>
             <span className="text-white">Young Leaders</span>
@@ -65,7 +65,7 @@ export function HomePage() {
           <p className="text-2xl md:text-[34px] text-transparent [-webkit-text-stroke:1px_white] font-['Open_Sans'] font-[800] mt-2">
             Empowering Pakistan Future Leaders
           </p>
-          <p className="text-base md:text-[18px] italic font-medium mt-[12px] text-white">
+          <p className="text-base md:text-[18px] italic font-medium mt-[12px] text-white max-w-[992px]">
             The Prime Minister&apos;s National Youth Council serves as the
             official body representing young voices across Pakistan — driving
             inclusion, innovation, and policy development for a brighter
@@ -95,38 +95,35 @@ export function HomePage() {
         <img
           src="/assets/images/applynowCircle.svg"
           alt=""
-          className="absolute -z-50 w-[100px] md:w-[164px] right-[18px] bottom-[44px] hidden md:block"
+          className="absolute -z-50 w-[100px] md:w-[164px] right-[68px] bottom-[84px] hidden md:block"
         />
       </section>
 
-      <section className="h-auto bg-white flex flex-row flex-wrap px-4 md:px-[60px] py-[45px]">
-        <div className="w-full md:w-1/2 text-center mb-8 md:mb-0">
+      <section className="h-auto bg-white flex flex-row px-4 md:px-[60px] py-[45px] items-center justify-center gap-8 2xl:gap-16 max-w-[1440px] mx-auto w-full">
+        <div className="text-center max-w-[894px] w-full">
           <img
             src="/assets/images/white-section_Left.png"
             alt="Speaker speaking"
-            className="w-full md:w-[80%] h-full object-cover mx-auto"
+            className="max-w-[624px] h-[444px] object-cover mx-auto "
           />
         </div>
-        <div className="w-full md:w-1/2">
+        <div className="max-w-[643px]">
           <h2 className="text-transparent [-webkit-text-stroke:1px_black] text-white font-['Open_Sans'] text-[24px] font-[800]">
             What is the Youth Council?
           </h2>
           <h1 className="mt-[12px] w-full  text-3xl md:text-[40px] font-bold max-w-[522px] leading-10 uppercase">
             A Platform for Voices, Growth, Change
           </h1>
-          <p className="text-[18px] text-[#6a7282] w-full md:w-[80%] font-['Roboto'] mt-[18px]">
+          <p className="text-[18px] text-[#6a7282] w-full font-['Roboto'] mt-[18px]">
             Constituted under the approval of the Prime Minister of Pakistan,
             the National Youth Council represents youth from all provinces and
             overseas. It aims to integrate young people into policymaking,
             development, and leadership at all levels of government.
           </p>
-          <a
-            href="#"
-            className="px-[24px] py-[12px] bg-[#088e48] border-none rounded-[12px] w-auto md:w-[20%] mt-[24px] inline-flex items-center justify-center text-white gap-2"
-          >
+          <button className="px-[24px] py-[12px] bg-[#088e48] border-none rounded-[12px] w-auto  mt-[24px] inline-flex items-center justify-center text-white gap-2">
             About Us
             <img src="/assets/images/anchorArrow.svg" width={20} alt="" />
-          </a>
+          </button>
         </div>
       </section>
 
@@ -134,13 +131,13 @@ export function HomePage() {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-[40px] font-bold text-white mb-4 uppercase">
+            <h1 className="text-[40px] font-bold text-white mb-2 uppercase">
               Featured Stories
             </h1>
-            <h2 className="text-[#088e48] text-lg md:text-xl font-bold mb-4 uppercase tracking-wide">
+            <h2 className="text-[#088e48] text-lg md:text-xl font-bold mb-2 uppercase tracking-wide">
               Inclusive. Diverse. Representing Every Young Pakistani
             </h2>
-            <p className="text-gray-300 text-sm md:text-base max-w-4xl mx-auto leading-relaxed">
+            <p className="text-gray-300 text-sm md:text-base max-w-[942px] mx-auto leading-relaxed">
               Real stories from young Pakistanis whose journeys have been shaped
               by learning programs, leadership opportunities, community
               projects, and NYC initiatives. These voices represent the
@@ -163,7 +160,7 @@ export function HomePage() {
                   <div className="text-4xl md:text-[44px] font-bold text-white mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-[#088e48] text-sm md:text-base font-semibold">
+                  <div className="text-[#088e48] text-sm md:text-base font-semibold max-w-[174px]">
                     {stat.label}
                   </div>
                 </div>
@@ -171,8 +168,8 @@ export function HomePage() {
             })}
           </div>
         </div>
-        <div className="flex flex-col md:flex-row flex-wrap text-left justify-center gap-6 md:gap-[24px] mt-[40px] text-[16px]">
-          <div className="w-full md:w-[30%] gap-[24px] rounded-[12px]">
+        <div className="flex flex-col md:flex-row flex-wrap text-left justify-center gap-6 md:gap-[24px] mt-[40px] text-[16px] 2xl:mb-20">
+          <div className="w-full md:w-[30%] gap-[24px] rounded-[12px] h-[482px]">
             <img
               src="/assets/images/ayeshaAzhar.svg"
               alt=""
@@ -190,7 +187,7 @@ export function HomePage() {
               <div className="text-[#088e48] font-medium text-[14px]">
                 DIGITAL SKILLS &amp; FREELANCING
               </div>
-              <p className="text-[#475063] text-[14px] font-bold text-left">
+              <p className="text-[#475063] text-[14px] font-medium text-left ">
                 &quot;Before joining the NYC Digital Skills track, I didn&apos;t
                 know how to turn my passion into a career. Today, I work with
                 global clients and teach young girls in my village how to
@@ -198,7 +195,7 @@ export function HomePage() {
               </p>
             </div>
           </div>
-          <div className="w-full md:w-[30%] gap-[24px]  rounded-[12px]">
+          <div className="w-full md:w-[30%] gap-[24px]  rounded-[12px] h-[482px]">
             <img
               src="/assets/images/bilalAbbas.svg"
               alt=""
@@ -214,14 +211,14 @@ export function HomePage() {
               <div className="text-[#088e48] font-medium text-[14px]">
                 DIGITAL SKILLS &amp; FREELANCING
               </div>
-              <p className="text-[#475063] text-[14px] font-bold text-left">
+              <p className="text-[#475063] text-[14px] font-medium text-left">
                 &quot;NYC gave me my first platform to speak about youth sports
                 and community development. I used that confidence to start a
                 small football program for children in Lyari.&quot;
               </p>
             </div>
           </div>
-          <div className="w-full md:w-[30%] gap-[24px] rounded-[12px]">
+          <div className="w-full md:w-[30%] gap-[24px] rounded-[12px] h-[482px]">
             <img src="/assets/images/sanaKhan.svg" alt="" className="w-full" />
             <div className="p-[20px] flex flex-col gap-[8px] bg-white rounded-b-[12px] items-start">
               <div>
@@ -233,7 +230,7 @@ export function HomePage() {
               <div className="text-[#088e48] font-medium text-[14px]">
                 WOMEN ENTREPRENEURSHIP
               </div>
-              <p className="text-[#475063] text-[14px] font-bold text-left">
+              <p className="text-[#475063] text-[14px] font-medium text-left">
                 &quot;Through the NYC Entrepreneurship Workshops, I learned how
                 to register my small craft business. Now I employ three young
                 women from my neighborhood.&quot;
@@ -243,16 +240,16 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="py-[40px] px-4 md:pl-[44px] bg-[#F6F6F6]">
+      <section className="S md:pl-[44px] bg-[#F6F6F6]">
         <div className="flex flex-col md:flex-row">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto flex flex-col gap-6 items-start">
             {/* Header */}
-            <div className="text-start mb-12">
+            <div className="text-start max-w-[643px]">
               <h1 className="text-3xl md:text-4xl lg:text-[40px] font-bold text-black mb-6 uppercase">
                 Global Engagement &<br />
                 International Partnerships
               </h1>
-              <p className="text-gray-600 text-base md:text-lg max-w-[642px] 2xl:max-w-[842px] mx-auto leading-relaxed ">
+              <p className="text-gray-600 text-base md:text-lg leading-tight">
                 Our impact extends far beyond national borders. Through active
                 participation in international conferences, youth assemblies,
                 and global innovation programs, the Council connects Pakistan's
@@ -278,11 +275,11 @@ export function HomePage() {
               ))}
             </div>
           </div>
-          <div className="relative w-full md:w-[40%] overflow-hidden">
+          <div className="relative overflow-hidden">
             <img
-              src="/assets/images/worldMap1.svg"
+              src="/images/map.png"
               alt=""
-              className="object-contain w-full"
+              className="object-contain h-[598px]"
             />
           </div>
         </div>
@@ -303,7 +300,7 @@ export function HomePage() {
             leadership, technology, environment, and social development
           </p>
         </div>
-        <div className="w-[90%] flex justify-center items-center flex-row flex-wrap mt-[40px] gap-[32px]">
+        <div className="w-[90%] flex justify-center items-center flex-row mt-[40px] gap-[32px]">
           {[1, 2, 3].map((idx) => (
             <div
               className="w-[400px] h-auto bg-white text-black text-left border-none rounded-[12px]"
@@ -322,7 +319,9 @@ export function HomePage() {
                   Dec, 2025
                 </div>
               </div>
-              <h1 className="text-[16px] mt-[24px] px-[20px]">Project 1</h1>
+              <h1 className=" mt-[12px] px-[20px] text-[16px] font-bold">
+                Project 1
+              </h1>
               <p className="text-[14px] text-[#6a7282] mt-[4px] px-[20px]">
                 Comprehensive leadership training workshops empowering young
                 leaders across Pakistan with...
@@ -336,8 +335,10 @@ export function HomePage() {
                     alt=""
                     className="h-[60%]"
                   />
-                  <div className="flex flex-col gap-[0.4px] ml-[8px]">
-                    <div>Participants</div>
+                  <div className="flex flex-col gap-[0.4px] ml-[8px] items-start">
+                    <div className="text-[12px] font-normal text-[#6A7282]">
+                      Participants
+                    </div>
                     <div className="text-[#088e48] font-medium">2500+</div>
                   </div>
                 </div>
@@ -357,68 +358,72 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className=" text-[#041502] font-['Open_Sans'] flex gap-4 md:gap-[24px] justify-between flex-row flex-wrap px-4 md:px-[110px] py-[30px] max-w-[1440px] mx-auto">
-        <div className="w-full md:w-[20%] mb-6 md:mb-0 ">
-          <h1 className="mt-[16px] text-2xl md:text-3xl lg:text-[44px] font-extrabold">
-            Thematic Areas
-          </h1>
-          <p className="text-[#6a7282] mt-[8px]">
-            Seven interconnected pillars driving youth empowerment across
-            Pakistan
-          </p>
-        </div>
-        <div className="bg-white border-none rounded-[12px] p-[24px] w-full sm:w-[calc(50%-8px)] md:w-[20%]">
-          <img src="/assets/images/gray-doc.svg" alt="" />
-          <h3 className="mt-[16px] text-[20px] font-bold">Policy Support</h3>
-          <p className="text-[#6a7282] mt-[8px]">
-            Strengthening youth policies and accountability mechanism
-          </p>
-        </div>
-        <div className="bg-white border-none rounded-[12px] p-[24px] w-full sm:w-[calc(50%-8px)] md:w-[20%]">
-          <img src="/assets/images/mediaSupport.svg" alt="" />
-          <h3 className="mt-[16px] text-[20px] font-bold">Media Support</h3>
-          <p className="text-[#6a7282] mt-[8px]">
-            Promoting youth narratives through digital platforms
-          </p>
-        </div>
-        <div className="bg-white border-none rounded-[12px] p-[24px] w-full sm:w-[calc(50%-8px)] md:w-[20%]">
-          <img src="/assets/images/institutionalization.svg" alt="" />
-          <h3 className="mt-[16px] text-[20px] font-bold">
-            Institutionalization
-          </h3>
-          <p className="text-[#6a7282] mt-[8px]">
-            Building a strong and sustainable council structure
-          </p>
-        </div>
-        <div className="bg-white border-none rounded-[12px] p-[24px] w-full sm:w-[calc(50%-8px)] md:w-[20%]">
-          <img src="/assets/images/youthSupport.svg" alt="" />
-          <h3 className="mt-[16px] text-[20px] font-bold">
-            Support to Marginalized Youth
-          </h3>
-          <p className="text-[#6a7282] mt-[8px]">
-            Strengthening youth policies and accountability mechanism
-          </p>
-        </div>
-        <div className="bg-white border-none rounded-[12px] p-[24px] w-full sm:w-[calc(50%-8px)] md:w-[20%]">
-          <img src="/assets/images/employment.svg" alt="" />
-          <h3 className="mt-[16px] text-[20px] font-bold">Employment</h3>
-          <p className="text-[#6a7282] mt-[8px]">
-            Creating opportunities and skill-building for youth
-          </p>
-        </div>
-        <div className="bg-white border-none rounded-[12px] p-[24px] w-full sm:w-[calc(50%-8px)] md:w-[20%]">
-          <img src="/assets/images/rhr.svg" alt="" />
-          <h3 className="mt-[16px] text-[20px] font-bold">RHR</h3>
-          <p className="text-[#6a7282] mt-[8px]">
-            Advocating for youth health awareness
-          </p>
-        </div>
-        <div className="bg-white border-none rounded-[12px] p-[24px] w-full sm:w-[calc(50%-8px)] md:w-[20%]">
-          <img src="/assets/images/youthEngagement.svg" alt="" />
-          <h3 className="mt-[16px] text-[20px] font-bold">Youth Engagement</h3>
-          <p className="text-[#6a7282] mt-[8px]">
-            Encouraging civic participation and leadership
-          </p>
+      <section className=" text-[#041502] bg-[#F6F6F6] font-['Open_Sans']  px-4 md:px-[110px] py-[45px]  ">
+        <div className="flex justify-center gap-8 flex-row flex-wrap max-w-[1440px] mx-auto">
+          <div className="w-full md:w-[20%] mb-6 md:mb-0 ">
+            <h1 className="mt-[16px] text-2xl md:text-3xl lg:text-[44px] font-extrabold">
+              Thematic Areas
+            </h1>
+            <p className="text-[#6a7282] mt-[12px] text-[15px]">
+              Seven interconnected pillars driving youth empowerment across
+              Pakistan
+            </p>
+          </div>
+          <div className="bg-white border-none rounded-[12px] p-[24px] h-[220px] w-full sm:w-[calc(50%-8px)] md:w-[20%] flex flex-col items-start justify-center">
+            <img src="/assets/images/gray-doc.svg" alt="" />
+            <h3 className="mt-[16px] text-[20px] font-bold">Policy Support</h3>
+            <p className="text-[#6a7282] mt-[8px] max-w-[232px] text-[13px] w-full">
+              Strengthening youth policies and accountability mechanism
+            </p>
+          </div>
+          <div className="bg-white flex flex-col items-start justify-center border-none rounded-[12px] p-[24px] w-full h-[220px] sm:w-[calc(50%-8px)] md:w-[20%]">
+            <img src="/assets/images/mediaSupport.svg" alt="" />
+            <h3 className="mt-[16px] text-[20px] font-bold">Media Support</h3>
+            <p className="text-[#6a7282] mt-[8px] max-w-[232px] text-[13px] w-full">
+              Promoting youth narratives through digital platforms
+            </p>
+          </div>
+          <div className="bg-white flex flex-col items-start justify-center border-none rounded-[12px] p-[24px] w-full h-[220px] sm:w-[calc(50%-8px)] md:w-[20%]">
+            <img src="/assets/images/institutionalization.svg" alt="" />
+            <h3 className="mt-[16px] text-[20px] font-bold">
+              Institutionalization
+            </h3>
+            <p className="text-[#6a7282] mt-[8px] max-w-[232px] text-[13px] w-full">
+              Building a strong and sustainable council structure
+            </p>
+          </div>
+          <div className="bg-white flex flex-col items-start justify-center border-none rounded-[12px] p-[24px] w-full h-[220px] sm:w-[calc(50%-8px)] md:w-[20%]">
+            <img src="/assets/images/youthSupport.svg" alt="" />
+            <h3 className="mt-[16px] text-[20px] font-bold">
+              Support to Marginalized Youth
+            </h3>
+            <p className="text-[#6a7282] mt-[8px] max-w-[232px] text-[13px] w-full">
+              Strengthening youth policies and accountability mechanism
+            </p>
+          </div>
+          <div className="bg-white flex flex-col items-start justify-center border-none rounded-[12px] p-[24px] w-full h-[220px] sm:w-[calc(50%-8px)] md:w-[20%]">
+            <img src="/assets/images/employment.svg" alt="" />
+            <h3 className="mt-[16px] text-[20px] font-bold">Employment</h3>
+            <p className="text-[#6a7282] mt-[8px] max-w-[232px] text-[13px] w-full">
+              Creating opportunities and skill-building for youth
+            </p>
+          </div>
+          <div className="bg-white flex flex-col items-start justify-center border-none rounded-[12px] p-[24px] h-[220px] w-full sm:w-[calc(50%-8px)] md:w-[20%]">
+            <img src="/assets/images/rhr.svg" alt="" />
+            <h3 className="mt-[16px] text-[20px] font-bold">RHR</h3>
+            <p className="text-[#6a7282] mt-[8px] max-w-[232px] text-[13px] w-full">
+              Advocating for youth health awareness
+            </p>
+          </div>
+          <div className="bg-white flex flex-col items-start justify-center border-none rounded-[12px] p-[24px] h-[220px] w-full sm:w-[calc(50%-8px)] md:w-[20%]">
+            <img src="/assets/images/youthEngagement.svg" alt="" />
+            <h3 className="mt-[16px] text-[20px] font-bold">
+              Youth Engagement
+            </h3>
+            <p className="text-[#6a7282] mt-[8px] max-w-[232px] text-[13px] w-full">
+              Encouraging civic participation and leadership
+            </p>
+          </div>
         </div>
       </section>
 
