@@ -322,7 +322,7 @@ export function HomePage() {
           <button
             onClick={handlePrev}
             disabled={currentIndex === 0}
-            className="absolute left-20 z-10 text-white bg-[#088e48] rounded-full p-3 shadow-lg hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+            className="absolute left-0 z-10 text-white bg-[#088e48] rounded-full p-3 shadow-lg hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
             aria-label="Previous"
           >
             <ChevronLeft size={24} className="cursor-pointer" />
@@ -401,7 +401,7 @@ export function HomePage() {
           <button
             onClick={handleNext}
             disabled={currentIndex === maxIndex}
-            className="absolute right-20 z-10 text-white bg-[#088e48] rounded-full p-3 shadow-lg hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all cursor-pointer"
+            className="absolute right-0 z-10 text-white bg-[#088e48] rounded-full p-3 shadow-lg hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all cursor-pointer"
             aria-label="Next"
           >
             <ChevronRight size={24} className="cursor-pointer" />
