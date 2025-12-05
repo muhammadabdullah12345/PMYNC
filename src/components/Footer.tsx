@@ -13,28 +13,28 @@ export function Footer() {
               <img
                 src="/assets/images/facebook.svg"
                 alt="facebook"
-                className="w-[20px] h-[20px]"
+                className="w-[24px] h-[24px]"
               />
             </a>
             <a href="#">
               <img
                 src="/assets/images/instagram.svg"
                 alt="instagram"
-                className="w-[20px] h-[20px]"
+                className="w-[24px] h-[24px]"
               />
             </a>
             <a href="#">
               <img
                 src="/assets/images/twitter.svg"
                 alt="twitter"
-                className="w-[20px] h-[20px]"
+                className="w-[24px] h-[24px]"
               />
             </a>
             <a href="#">
               <img
                 src="/assets/images/linkedin.svg"
                 alt="linkedin"
-                className="w-[20px] h-[20px]"
+                className="w-[24px] h-[24px]"
               />
             </a>
           </ul>

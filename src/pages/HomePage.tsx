@@ -3,8 +3,24 @@ import { setupRevealAnimations } from "../smoothAnimations.js";
 import NYCEvents from "../components/NYCEvents.js";
 import FAQs from "../components/FAQs.js";
 import CTABanner from "../components/CTABanner.js";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export function HomePage() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Duplicated projects data (9 total cards)
+  const projects = [1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3];
+  const cardsToShow = 9;
+  const maxIndex = projects.length - cardsToShow;
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => Math.max(0, prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => Math.min(maxIndex, prev + 1));
+  };
   const stats1 = [
     {
       image: "/images/diversity.png",
@@ -268,7 +284,7 @@ export function HomePage() {
                   <div className="text-[24px] font-bold mb-1">
                     {stat.number}
                   </div>
-                  <div className="text-sm md:text-[14px] font-normal leading-snug">
+                  <div className="text-sm md:text-[14px] font-normal leading-snug max-w-[93px]">
                     {stat.label}
                   </div>
                 </div>
@@ -288,7 +304,7 @@ export function HomePage() {
       <section className="text-center flex flex-col flex-wrap justify-center items-center text-white bg-[url('/assets/images/greenbg1.svg')] py-[100px] px-[24px]">
         <div className="w-[45%] text-[18px] flex flex-col justify-center items-center">
           <h1>
-            <span className="text-transparent [-webkit-text-stroke:1px_white]  font-['Open_Sans'] text-[44px] font-[800]">
+            <span className="text-transparent [-webkit-text-stroke:1px_white] font-['Open_Sans'] text-[44px] font-[800]">
               NYC{" "}
             </span>{" "}
             <span className="text-[44px] font-[800] uppercase text-white">
@@ -300,61 +316,96 @@ export function HomePage() {
             leadership, technology, environment, and social development
           </p>
         </div>
-        <div className="w-[90%] flex justify-center items-center flex-row mt-[40px] gap-[32px]">
-          {[1, 2, 3].map((idx) => (
+
+        <div className="w-[90%] flex justify-center items-center mt-[40px] relative">
+          {/* Left Arrow */}
+          <button
+            onClick={handlePrev}
+            disabled={currentIndex === 0}
+            className="absolute left-20 z-10 text-white bg-[#088e48] rounded-full p-3 shadow-lg hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+            aria-label="Previous"
+          >
+            <ChevronLeft size={24} className="cursor-pointer" />
+          </button>
+
+          {/* Cards Container */}
+          <div className="overflow-hidden w-full max-w-[1300px]">
             <div
-              className="w-[400px] h-auto bg-white text-black text-left border-none rounded-[12px]"
-              key={idx}
+              className="flex transition-transform duration-300 ease-in-out gap-[32px]"
+              style={{
+                transform: `translateX(-${currentIndex * (400 + 32)}px)`,
+              }}
             >
-              <img
-                src={`/assets/images/NYC${idx}.png`}
-                alt="NYC members images"
-                className="w-full h-[70%] min-h-[300px] object-cover rounded-[12px]"
-              />
-              <div className="flex justify-start items-center gap-[24px] px-[20px] mt-[12px]">
-                <div className="flex flex-row gap-[4px] justify-center items-center">
-                  <img src="/assets/images/calendar.svg" alt="" />
-                  Nov, 2025
-                  <img src="/assets/images/left-arrow.svg" alt="" />
-                  Dec, 2025
-                </div>
-              </div>
-              <h1 className=" mt-[12px] px-[20px] text-[16px] font-bold">
-                Project 1
-              </h1>
-              <p className="text-[14px] text-[#6a7282] mt-[4px] px-[20px]">
-                Comprehensive leadership training workshops empowering young
-                leaders across Pakistan with...
-              </p>
-              <hr className="mt-3 mx-4" />
-              <div className="separator" />
-              <div className="mt-[16px] flex flex-row gap-[4px] justify-between items-center px-[20px]">
-                <div className="flex items-center">
+              {projects.map((idx, i) => (
+                <div
+                  className="w-[400px] flex-shrink-0 h-auto bg-white text-black text-left border-none rounded-[12px]"
+                  key={i}
+                >
                   <img
-                    src="/assets/images/people.svg"
-                    alt=""
-                    className="h-[60%]"
+                    src={`/assets/images/NYC${idx}.png`}
+                    alt="NYC members images"
+                    className="w-full h-[70%] min-h-[300px] object-cover rounded-[12px]"
                   />
-                  <div className="flex flex-col gap-[0.4px] ml-[8px] items-start">
-                    <div className="text-[12px] font-normal text-[#6A7282]">
-                      Participants
+                  <div className="flex justify-start items-center gap-[24px] px-[20px] mt-[12px]">
+                    <div className="flex flex-row gap-[4px] justify-center items-center text-sm">
+                      <img src="/assets/images/calendar.svg" alt="" />
+                      Nov, 2025
+                      <img src="/assets/images/left-arrow.svg" alt="" />
+                      Dec, 2025
                     </div>
-                    <div className="text-[#088e48] font-medium">2500+</div>
                   </div>
+                  <h1 className="mt-[12px] px-[20px] text-[16px] font-bold">
+                    Project {idx}
+                  </h1>
+                  <p className="text-[14px] text-[#6a7282] mt-[4px] px-[20px]">
+                    Comprehensive leadership training workshops empowering young
+                    leaders across Pakistan with...
+                  </p>
+                  <hr className="mt-3 mx-4" />
+                  <div className="separator" />
+                  <div className="mt-[16px] flex flex-row gap-[4px] justify-between items-center px-[20px]">
+                    <div className="flex items-center">
+                      <img
+                        src="/assets/images/people.svg"
+                        alt=""
+                        className="h-[60%]"
+                      />
+                      <div className="flex flex-col gap-[0.4px] ml-[8px] items-start">
+                        <div className="text-[12px] font-normal text-[#6A7282]">
+                          Participants
+                        </div>
+                        <div className="text-[#088e48] font-medium">2500+</div>
+                      </div>
+                    </div>
+                    <div>
+                      <img src="/assets/images/participants.svg" alt="" />
+                    </div>
+                  </div>
+                  <a
+                    href=""
+                    className="px-[24px] py-[12px] bg-[#088e48] border-none rounded-[12px] m-[24px_20px] inline-flex items-center gap-2"
+                  >
+                    Learn More
+                    <img
+                      src="/assets/images/anchorArrow.svg"
+                      width={20}
+                      alt=""
+                    />
+                  </a>
                 </div>
-                <div>
-                  <img src="/assets/images/participants.svg" alt="" />
-                </div>
-              </div>
-              <a
-                href=""
-                className="px-[24px] py-[12px] bg-[#088e48] border-none rounded-[12px] w-[40%] m-[24px_20px] inline-flex"
-              >
-                Learn More
-                <img src="/assets/images/anchorArrow.svg" width={20} alt="" />
-              </a>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Right Arrow */}
+          <button
+            onClick={handleNext}
+            disabled={currentIndex === maxIndex}
+            className="absolute right-20 z-10 text-white bg-[#088e48] rounded-full p-3 shadow-lg hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all cursor-pointer"
+            aria-label="Next"
+          >
+            <ChevronRight size={24} className="cursor-pointer" />
+          </button>
         </div>
       </section>
 
